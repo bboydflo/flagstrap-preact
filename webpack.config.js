@@ -66,12 +66,12 @@ let plugins = [
     'process.env.version': JSON.stringify(version)
   }),
 
-  new webpack.ProvidePlugin({
+  /* new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery',
     jquery: 'jquery',
     'window.jQuery': 'jquery'
-  }),
+  }), */
 
   // new BabiliPlugin(),
   // new webpack.optimize.UglifyJsPlugin({ sourceMap: srcMapsType }),
@@ -225,11 +225,7 @@ let webpackConfig = {
   },
 
   resolve: {
-    extensions: ['.js', '.jsx'],
-    alias: {
-      // 'flagstrap': path.resolve(__dirname, 'src', 'js', 'vendor', 'jquery-flagstrap.min.js')
-      'flagstrap': path.resolve(__dirname, 'src', 'js', 'vendor', 'jquery-flagstrap.js')
-    }
+    extensions: ['.js', '.jsx']
   },
 
   plugins: plugins,
@@ -240,5 +236,4 @@ let webpackConfig = {
   }
 };
 
-// simple dll optimization
 module.exports = webpackConfig;

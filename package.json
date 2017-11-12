@@ -1,16 +1,9 @@
 {
-  "name": "webpack-build",
+  "name": "flagstrap-preact",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "cross-env NODE_ENV=production target=web webpack",
-    "build": "cross-env target=web webpack",
-    "dev": "webpack-dev-server webpack--env development",
-    "serve": "http-server ./ -c-1 -p 7171"
-  },
-  "author": "",
-  "license": "ISC",
+  "description": "Flagstrap jquery plugin version for Preact",
+  "main": "src/js/flagstrap.js",
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
@@ -34,8 +27,6 @@
     "eslint-plugin-standard": "^3.0.1",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
-    "gulp": "^3.9.1",
-    "gulp-rename": "^1.2.2",
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.29.0",
     "http-server": "^0.10.0",
@@ -46,21 +37,19 @@
     "source-map-loader": "^0.2.1",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
-    "webpack": "^3.0.0",
-    "webpack-bundle-analyzer": "^2.9.0",
-    "webpack-dev-server": "^2.5.0",
-    "webpack-manifest-plugin": "^1.1.0",
-    "webpack-merge": "^4.1.0"
+    "webpack": "^3.0.0"
   },
-  "dependencies": {
-    "bootstrap": "^3.3.7",
-    "domready": "^1.0.8",
-    "font-awesome": "^4.7.0",
-    "jquery": "^2.2.4",
-    "lodash": "^4.17.4",
-    "preact": "^8.2.4",
-    "rsvp": "^4.7.0",
-    "toastr": "^2.1.2",
-    "underscore": "^1.8.3"
-  }
+  "scripts": {
+    "start": "cross-env NODE_ENV=production target=web webpack",
+    "build": "cross-env target=web webpack",
+    "serve": "http-server ./ -c-1 -p 7171",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "preact",
+    "bootstrap",
+    "flagstrap"
+  ],
+  "author": "Florin Cosmin Onciu",
+  "license": "MIT"
 }

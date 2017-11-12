@@ -1,5 +1,19 @@
-import Domready from 'domready';
-import boot from './modules/on-ready';
+import { h, render } from 'preact';
+import Flagstrap from './flagstrap';
 
-// boot the app
-Domready(boot);
+const cb = (lang) => {
+  console.log('on language changed to: ' + lang);
+};
+
+// define shorter list of countries
+let cList = {
+  'AF': 'Afghanistan',
+  'AL': 'Albania',
+  'DZ': 'Algeria',
+  'AS': 'American Samoa'
+};
+
+render(
+  <Flagstrap countries={cList} onLanguageChanged={cb} selected='DZ' />,
+  document.getElementById('app')
+);

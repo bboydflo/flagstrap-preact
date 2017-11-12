@@ -6,9 +6,6 @@ A dropdown component that makes it possible to choose a country from a list. Thi
 
 ## Usage Example
 
-Provide the list of items as `data`, an item renderer as `renderRow`, and the height of a single row as `rowHeight`. Everything else is optional.
-
-> Make sure to enable transpilation for this module! Check [.babelrc](https://github.com/bboydflo/flagstrap-preact/blob/master/.babelrc) and [webpack configuration](https://github.com/bboydflo/flagstrap-preact/blob/master/https://github.com/bboydflo/flagstrap-preact/blob/master/webpack.config.js) if you have troubles.
 
 ```js
 const onChanged = (countryCode) => {
@@ -28,6 +25,10 @@ const onChanged = (countryCode) => {
 />
 ```
 
+> Make sure to enable transpilation for this module! Check [.babelrc](https://github.com/bboydflo/flagstrap-preact/blob/master/.babelrc) and [webpack configuration](https://github.com/bboydflo/flagstrap-preact/blob/master/https://github.com/bboydflo/flagstrap-preact/blob/master/webpack.config.js) if you have troubles.
+
+
+
 #### Demo
 
 <img alt="preview" src="https://github.com/bboydflo/flagstrap-preact/blob/master/flagstrap-preact.gif" width="720">
@@ -42,7 +43,7 @@ const onChanged = (countryCode) => {
 | **`countries`**     | _Object_   | Object containing country code as keys and country names as values 
 | **`choose`**        | _String_   | Default dropdown label.
 | **`selected`**      | _String_   | Default selected country code
-| **`onChange`**      | _Funtion_  | Prop to handle dropdown change outside of Flagstrap component \*\*
+| **`onChange`**      | _Function_ | Prop to handle dropdown change outside of Flagstrap component \*\*
 
 
 ---

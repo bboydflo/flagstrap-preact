@@ -14,6 +14,6 @@ let cList = {
 };
 
 render(
-  <Flagstrap countries={cList} onLanguageChanged={cb} selected='DZ' />,
+  <Flagstrap countries={cList} onLanguageChanged={cb} selected='AS' />,
   document.getElementById('app')
 );

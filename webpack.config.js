@@ -2,25 +2,18 @@ const fs = require('fs');
 const qs = require('qs');
 const path = require('path');
 const webpack = require('webpack');
-// const BabiliPlugin = require('babili-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-// import babel rc json file
+// babel rc json file
 let babelrc = JSON.parse(fs.readFileSync('.babelrc'));
 
-// is production flag
 let isProduction = process.env.NODE_ENV === 'production';
 
-// is target == web
-let isWeb = process.env.target === 'web';
-
-// var sourceMapQueryStr = !isProduction ? '+sourceMap' : '-sourceMap';
 let sourceMapQueryStr = '+sourceMap';
 
-// webpack used paths
 const PATHS = {
   js: path.join(__dirname, 'src', 'js'),
   dist: path.join(__dirname, 'dist'),
@@ -35,15 +28,12 @@ const today = new Date();
 const day = today.getUTCDate();
 const year = today.getFullYear() + '';
 let month = today.getUTCMonth() + 1;
-
-// let seconds = today.getSeconds();
 let hour = today.getHours();
 let minutes = today.getMinutes() < 10 ? '0' + today.getMinutes() : today.getMinutes();
 
 // update month
 month = month < 10 ? '0' + month : month;
 
-// production version
 const version = `v ${day}.${month}.${year.substring(2, 4)} - ${hour}:${minutes}`;
 
 // update process env version
@@ -56,26 +46,17 @@ let plugins = [
     'index.html'
   ], {root: __dirname}),
 
-  new CopyWebpackPlugin([
-    { from: PATHS.assets, to: PATHS.dist }
-  ]),
+  new CopyWebpackPlugin(
+    [{
+      from: PATHS.assets, to: PATHS.dist
+    }]
+  ),
 
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     'process.env.version': JSON.stringify(version)
   }),
 
-  /* new webpack.ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
-    jquery: 'jquery',
-    'window.jQuery': 'jquery'
-  }), */
-
-  // new BabiliPlugin(),
-  // new webpack.optimize.UglifyJsPlugin({ sourceMap: srcMapsType }),
-
-  // generate index.html
   new HtmlWebpackPlugin({
     // will not automatically inject files in the template
     // improve this to automatically generate the html file for
@@ -84,8 +65,7 @@ let plugins = [
     // this is relative to output path
     filename: '../index.html',
     template: path.join(__dirname, 'src', 'html', 'index.ejs'),
-    title: 'SmartPigs ' + version,
-    manifest: isWeb && isProduction
+    title: 'Flagstrap Preact example ' + version
   }),
 
   new ExtractTextPlugin({
@@ -93,8 +73,6 @@ let plugins = [
     filename: 'css/[name].css'
     // allChunks: true,
   })
-
-  // new webpack.NamedModulesPlugin(),
 ];
 
 // check if it's production
@@ -112,7 +90,7 @@ let webpackConfig = {
   entry: {
     app: path.join(__dirname, 'src', 'js', 'app.js'),
     core: path.join(__dirname, 'src', 'sass', 'core.scss'),
-    styles: path.join(__dirname, 'src', 'sass', 'app.scss')
+    flagstrap: path.join(__dirname, 'src', 'sass', 'app.scss')
   },
 
   output: {

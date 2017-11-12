@@ -28,9 +28,7 @@ const onChanged = (countryCode) => {
 
 #### Demo
 
-<img alt="preview" src="https://github.com/bboydflo/flagstrap-preact/blob/master/flagstrap-preact.gif" style="width: 100%;">
-
-
+<img alt="preview" src="https://github.com/bboydflo/flagstrap-preact/blob/master/flagstrap-preact.gif" width="720">
 
 ---
 

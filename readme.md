@@ -8,21 +8,23 @@ A dropdown component that makes it possible to choose a country from a list. Thi
 
 Provide the list of items as `data`, an item renderer as `renderRow`, and the height of a single row as `rowHeight`. Everything else is optional.
 
+> Make sure to enable transpilation for this module! Check [.babelrc](https://github.com/bboydflo/flagstrap-preact/blob/master/.babelrc) and [webpack configuration](https://github.com/bboydflo/flagstrap-preact/blob/master/https://github.com/bboydflo/flagstrap-preact/blob/master/webpack.config.js) if you have troubles.
+
 ```js
 const onChanged = (countryCode) => {
   console.log('new selected country: ', countryCode);
 }
 
 <Flagstrap
-    countries={
-      'AF': 'Afghanistan',
-      'AL': 'Albania',
-      'DZ': 'Algeria',
-      'AS': 'American Samoa'
-    }
-    choose={'Choose language'}
-    selected={'AS'}
-    onChange={onChanged}
+  countries={
+    'AF': 'Afghanistan',
+    'AL': 'Albania',
+    'DZ': 'Algeria',
+    'AS': 'American Samoa'
+  }
+  choose={'Choose language'}
+  selected={'AS'}
+  onChange={onChanged}
 />
 ```
 

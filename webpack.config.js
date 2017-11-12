@@ -134,11 +134,8 @@ let webpackConfig = {
         }, */
         exclude: [path.join(__dirname, 'node_modules')],
 
-        // **Actions**
         // Apply loaders the matched files.
-        // use: 'babel-loader',
         use: {
-          // loader: 'babel-loader',
           loader: 'babel-loader?' + JSON.stringify(Object.assign({}, babelrc, {cacheDirectory: true}))
         }
       },

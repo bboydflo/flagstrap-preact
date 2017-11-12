@@ -3,14 +3,6 @@
 A dropdown component that makes it possible to choose a country from a list. This component is suited only together with Bootstrap 3 styles and is a direct port of the [following plugin](https://github.com/blazeworx/flagstrap)
 
 
-#### [Demo](https://jsfiddle.net/)
-
-<a href="https://jsfiddle.net/developit/qqan9pdo/">
-<img alt="preview" src="https://i.gyazo.com/866e97be9075dd63260dbc5df30075ec.gif" width="420">
-</a>
-
----
-
 
 ## Usage Example
 
@@ -33,6 +25,13 @@ const onChanged = (countryCode) => {
     onChange={onChanged}
 />
 ```
+
+#### Demo
+
+<a href="https://jsfiddle.net/developit/qqan9pdo/">
+<img alt="preview" src="https://i.gyazo.com/866e97be9075dd63260dbc5df30075ec.gif" width="420">
+</a>
+
 
 
 ---

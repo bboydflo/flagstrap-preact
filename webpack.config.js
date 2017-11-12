@@ -112,8 +112,8 @@ let webpackConfig = {
   // it resolves to that.
   entry: {
     app: path.join(__dirname, 'src', 'js', 'app.js'),
-    core: path.join(__dirname, 'src', 'sass', 'core.scss')
-    // styles: path.join(__dirname, 'src', 'sass', 'smartpigs-main.scss')
+    core: path.join(__dirname, 'src', 'sass', 'core.scss'),
+    styles: path.join(__dirname, 'src', 'sass', 'app.scss')
   },
 
   output: {
@@ -227,7 +227,8 @@ let webpackConfig = {
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
-      'flagstrap': path.resolve(__dirname, 'src', 'js', 'vendor', 'jquery-flagstrap.min.js')
+      // 'flagstrap': path.resolve(__dirname, 'src', 'js', 'vendor', 'jquery-flagstrap.min.js')
+      'flagstrap': path.resolve(__dirname, 'src', 'js', 'vendor', 'jquery-flagstrap.js')
     }
   },
 

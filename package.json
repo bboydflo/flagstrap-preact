@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "description": "Flagstrap jquery plugin version for Preact",
   "main": "src/js/flagstrap.js",
-  "dependencies": {
-    "preact": "^8.2.4"
+  "dependencies": {},
+  "peerDependencies": {
+    "preact": "*"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

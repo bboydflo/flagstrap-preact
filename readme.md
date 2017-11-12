@@ -1,20 +1,88 @@
-### Things to keep in mind
+## `<Flagstrap />` for Preact
 
-`/* eslint-disable */` will disable eslint on the next line. if put on the top of the file will disable linting for the entire file. read more at [this link](http://eslint.org/docs/user-guide/configuring"eslint disable")
+A dropdown component that makes it possible to choose a country from a list. This component is suited only together with Bootstrap 3 styles and is a direct port of the [following plugin](https://github.com/blazeworx/flagstrap)
 
-use `// eslint-disable-next-line` to disable `eslint` for the next line
 
-### TODO's
+#### [Demo](https://jsfiddle.net/)
 
-- [x] added to do list
-- [x] better eslint
-- [x] update styles (wip)
-- [ ] build settings dialog
-- [x] remove clear button from the login form
-- [ ] implement login
-- [x] add scroll dinamically to the spread component if it's larger than the viewport
-- [ ] update old code and attach it as a zip instead. also keep track of old code version
-- [ ] fix flagstrap and all the jquery plugins
-- [ ] create a good dialog component (that works well after rerender)
-- [ ] create the main slider component
+<a href="https://jsfiddle.net/developit/qqan9pdo/">
+<img alt="preview" src="https://i.gyazo.com/866e97be9075dd63260dbc5df30075ec.gif" width="420">
+</a>
 
+---
+
+
+## Usage Example
+
+Provide the list of items as `data`, an item renderer as `renderRow`, and the height of a single row as `rowHeight`. Everything else is optional.
+
+```js
+const onChanged = (countryCode) => {
+  console.log('new selected country: ', countryCode);
+}
+
+<Flagstrap
+    countries={
+      'AF': 'Afghanistan',
+      'AL': 'Albania',
+      'DZ': 'Algeria',
+      'AS': 'American Samoa'
+    }
+    choose={'Choose language'}
+    selected={'AS'}
+    onChange={onChanged}
+/>
+```
+
+
+---
+
+
+## Props
+
+| Prop                | Type       | Description         |
+|---------------------|------------|---------------------|
+| **`countries`**     | _Object_   | Object containing country code as keys and country names as values 
+| **`choose`**        | _String_   | Default dropdown label.
+| **`selected`**      | _String_   | Default selected country code
+| **`onChange`**      | _Funtion_  | Prop to handle dropdown change outside of Flagstrap component \*\*
+
+
+---
+
+## Simple Example
+
+[**View this example on JSFiddle**](https://jsfiddle.net/`)
+
+```js
+import { h, render } from 'preact';
+import Flagstrap from './flagstrap';
+
+const cb = (lang) => {
+  console.log('on language changed to: ' + lang);
+};
+
+// define shorter list of countries
+let cList = {
+  'AF': 'Afghanistan',
+  'AL': 'Albania',
+  'DZ': 'Algeria',
+  'AS': 'American Samoa'
+};
+
+render(
+  <Flagstrap countries={cList} onLanguageChanged={cb} selected='AS' />,
+  document.getElementById('app')
+);
+
+```
+
+---
+
+
+### License
+
+[MIT]
+
+
+[MIT]: http://choosealicense.com/licenses/mit/

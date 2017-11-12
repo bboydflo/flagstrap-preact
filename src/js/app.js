@@ -5,7 +5,7 @@ const cb = (lang) => {
   console.log('on language changed to: ' + lang);
 };
 
-// define shorter list of countries
+// define a shorter list of countries
 let cList = {
   'AF': 'Afghanistan',
   'AL': 'Albania',
@@ -14,6 +14,10 @@ let cList = {
 };
 
 render(
-  <Flagstrap countries={cList} onLanguageChanged={cb} selected='AS' />,
+  <div class='container' style='padding-top: 25px;'>
+    <div class='row'>
+      <Flagstrap countries={cList} onChanged={cb} />
+    </div>
+  </div>,
   document.getElementById('app')
 );

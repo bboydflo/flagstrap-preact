@@ -267,6 +267,9 @@ export default class Flagstrap extends Component {
 
     let iconSelected = selectedCountry.key ? `flagstrap-icon flagstrap-${selectedCountry.key.toLocaleLowerCase()}` : 'flagstrap-icon';
 
+    console.log(iconSelected);
+    console.log(selectedCountry);
+
     return (
       <div class={`flagstrap ${open ? 'open' : ''}`}>
         <button
@@ -282,13 +285,13 @@ export default class Flagstrap extends Component {
         </button>
         <ul aria-labelled-by='flagstrap-drop-down' class='dropdown-menu' style='height: auto; max-height: 250px; overflow-x: hidden;'>
           <li>
-            <a data-val={choose}>
+            <a data-val='' onClick={this.onCountryChange}>
               <i class='flagstrap-icon flagstrap-choose language' style='margin-right: 10px;' />{choose}
             </a>
           </li>
           {Object.keys(countries).map(code => (
             <li>
-              <a data-val={code} onClick={this.changeLang}>
+              <a data-val={code} onClick={this.onCountryChange}>
                 <i class={`flagstrap-icon flagstrap-${code.toLowerCase()}`} style='margin-right: 10px;' />{countries[code]}
               </a>
             </li>
@@ -298,14 +301,14 @@ export default class Flagstrap extends Component {
     );
   }
 
-  changeLang = (ev) => {
+  onCountryChange = (ev) => {
     let lang = ev.target.getAttribute('data-val');
     this.setState({
       open: false,
       selected: lang
     });
-    if (this.props.hasOwnProperty('onLanguageChanged')) {
-      this.props.onLanguageChanged(lang);
+    if (this.props.hasOwnProperty('onChange')) {
+      this.props.onChange(lang);
     }
   }
 

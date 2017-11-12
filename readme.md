@@ -47,7 +47,6 @@ const onChanged = (countryCode) => {
 
 ## Simple Example
 
-[**View this example on JSFiddle**](https://jsfiddle.net/`)
 
 ```js
 import { h, render } from 'preact';

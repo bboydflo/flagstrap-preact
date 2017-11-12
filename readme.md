@@ -2,6 +2,11 @@
 
 A dropdown component that makes it possible to choose a country from a list. This component is suited only together with Bootstrap 3 styles and is a direct port of the [following plugin](https://github.com/blazeworx/flagstrap)
 
+## Installation
+```sh
+$ npm install flagstrap-preact
+```
+
 
 
 > Make sure to enable transpilation for this module! Check [.babelrc](https://github.com/bboydflo/flagstrap-preact/blob/master/.babelrc) and [webpack configuration](https://github.com/bboydflo/flagstrap-preact/blob/master/https://github.com/bboydflo/flagstrap-preact/blob/master/webpack.config.js) if you have troubles.

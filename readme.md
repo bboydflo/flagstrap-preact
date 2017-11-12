@@ -1,6 +1,6 @@
 ## `<Flagstrap />` for Preact
 
-A dropdown component that makes it possible to choose a country from a [list](https://github.com/bboydflo/flagstrap-preact/blob/master/.babelrc). This component is suited only together with Bootstrap 3 styles and is a direct port of the [following plugin](https://github.com/blazeworx/flagstrap)
+A dropdown component that makes it possible to choose a country from a [list](https://github.com/bboydflo/flagstrap-preact/blob/master/src/js/countries.js). This component is suited only together with Bootstrap 3 styles and is a direct port of the [following plugin](https://github.com/blazeworx/flagstrap)
 
 ## Installation
 ```sh

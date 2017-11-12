@@ -53,6 +53,10 @@
     "bootstrap",
     "flagstrap"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bboydflo/flagstrap-preact.git"
+  },
   "author": "Florin Cosmin Onciu",
   "license": "MIT"
 }

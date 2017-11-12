@@ -267,9 +267,6 @@ export default class Flagstrap extends Component {
 
     let iconSelected = selectedCountry.key ? `flagstrap-icon flagstrap-${selectedCountry.key.toLocaleLowerCase()}` : 'flagstrap-icon';
 
-    console.log(iconSelected);
-    console.log(selectedCountry);
-
     return (
       <div class={`flagstrap ${open ? 'open' : ''}`}>
         <button

@@ -4,6 +4,10 @@ A dropdown component that makes it possible to choose a country from a list. Thi
 
 
 
+> Make sure to enable transpilation for this module! Check [.babelrc](https://github.com/bboydflo/flagstrap-preact/blob/master/.babelrc) and [webpack configuration](https://github.com/bboydflo/flagstrap-preact/blob/master/https://github.com/bboydflo/flagstrap-preact/blob/master/webpack.config.js) if you have troubles.
+
+
+
 ## Usage Example
 
 
@@ -24,9 +28,6 @@ const onChanged = (countryCode) => {
   onChange={onChanged}
 />
 ```
-
-> Make sure to enable transpilation for this module! Check [.babelrc](https://github.com/bboydflo/flagstrap-preact/blob/master/.babelrc) and [webpack configuration](https://github.com/bboydflo/flagstrap-preact/blob/master/https://github.com/bboydflo/flagstrap-preact/blob/master/webpack.config.js) if you have troubles.
-
 
 
 #### Demo

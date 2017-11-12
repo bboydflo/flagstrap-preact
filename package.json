@@ -1,6 +1,6 @@
 {
   "name": "flagstrap-preact",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Flagstrap jquery plugin version for Preact",
   "main": "src/js/flagstrap.js",
   "dependencies": {

@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Flagstrap jquery plugin version for Preact",
   "main": "src/js/flagstrap.js",
-  "dependencies": {},
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "preact": "^8.2.4"
+  },
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",

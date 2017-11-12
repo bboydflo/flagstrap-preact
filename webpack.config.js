@@ -24,7 +24,6 @@ let sourceMapQueryStr = '+sourceMap';
 const PATHS = {
   js: path.join(__dirname, 'src', 'js'),
   dist: path.join(__dirname, 'dist'),
-  vendor: path.join(__dirname, 'src', 'js', 'vendor'),
   assets: path.join(__dirname, 'src', 'assets')
 };
 
@@ -132,7 +131,6 @@ let webpackConfig = {
       {
         test: /\.jsx?$/,
         include: PATHS.js,
-        exclude: PATHS.vendor,
         use: 'eslint-loader',
         enforce: 'pre'
       },
@@ -157,7 +155,7 @@ let webpackConfig = {
           // through functions if you want.
           return path.match(/node_modules/);
         }, */
-        exclude: [path.join(__dirname, 'node_modules'), PATHS.vendor],
+        exclude: [path.join(__dirname, 'node_modules')],
 
         // **Actions**
         // Apply loaders the matched files.
